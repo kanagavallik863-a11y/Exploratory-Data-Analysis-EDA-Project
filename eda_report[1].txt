@@ -1,0 +1,66 @@
+=== DATASET OVERVIEW ===
+Shape: (500, 10)
+
+Column types:
+StudentID                str
+Gender                   str
+StudyHoursPerDay     float64
+AttendancePercent    float64
+SleepHours           float64
+PriorScore           float64
+ParentalEducation        str
+Extracurricular          str
+StudyGroup               str
+FinalExamScore       float64
+dtype: object
+
+Missing values:
+StudentID            0
+Gender               0
+StudyHoursPerDay     0
+AttendancePercent    0
+SleepHours           0
+PriorScore           0
+ParentalEducation    0
+Extracurricular      0
+StudyGroup           0
+FinalExamScore       0
+dtype: int64
+
+=== STATISTICAL SUMMARY (numeric columns) ===
+       StudyHoursPerDay  AttendancePercent  ...  PriorScore  FinalExamScore
+count            500.00             500.00  ...      500.00          500.00
+mean               3.99              81.03  ...       64.90           60.87
+std                1.79              11.32  ...       14.45           10.14
+min                0.00              45.20  ...       20.00           31.90
+25%                2.70              73.30  ...       55.70           54.35
+50%                4.00              81.80  ...       64.85           60.90
+75%                5.20              88.82  ...       74.62           67.53
+max               10.00             100.00  ...      100.00           90.50
+
+[8 rows x 5 columns]
+
+=== CORRELATION WITH FinalExamScore ===
+FinalExamScore       1.000
+StudyHoursPerDay     0.606
+PriorScore           0.385
+AttendancePercent    0.218
+SleepHours           0.043
+Name: FinalExamScore, dtype: float64
+
+=== KEY INSIGHTS ===
+Strongest predictor of FinalExamScore: StudyHoursPerDay (corr = 0.606)
+
+Avg score - Extracurricular Yes vs No:
+Extracurricular
+No     60.50
+Yes    61.34
+Name: FinalExamScore, dtype: float64
+
+Avg score by Parental Education:
+ParentalEducation
+High School    60.35
+Bachelor's     61.23
+Master's       60.26
+PhD            63.18
+Name: FinalExamScore, dtype: float64
